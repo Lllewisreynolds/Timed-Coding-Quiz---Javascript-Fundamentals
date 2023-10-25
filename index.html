@@ -8,21 +8,28 @@
 </head>
   <body>
     <header>
-      <!-- Add nav element? -->
-      <!-- Use flex justify-content property to display two divs on either side of header? -->
-      <div id = "score_keeper" style="display: none">
-          <input type="button" value="View High Scores"></br>
-          Score:
+      <div>
+        <button id="highScores">View High Scores</button>
+        </br>
+          Score: <span id="currentScore"></span>
       </div>
   
-      <div id= "countdownTimer" style="display: none">
+      <div>
           Time Remaining: <span id="timer"></span>
       </div>
       </header>
   
     <h1>CODING QUIZ - JAVASCRIPT FUNDAMENTALS</h1>
 
-    <div id="question-one" class="quiz-ans-container">
+      <div id="quizInstructions">
+          <h2>Quiz Instructions</h2>
+          <p>Try to answer the following code-related questions within the time limit. You have 75 seconds to complete the quiz.</p> 
+          <p>Keep in mind that incorrect answers will penalise your score/time by<strong> 10 seconds!</strong></p>
+          <br>
+          <button id="startBtn">Start Quiz</button>
+      </div>
+
+    <div id="questionOne" class="quiz-ans-container">
       <h2>Q1. Commonly used data types DO NOT include: </h2>
       <div class="quiz-choice wrong-q1">
         <p>1. Strings</p>
@@ -37,8 +44,9 @@
         <p>4. Numbers</p>
       </div>
     </div>
-
-    <div id="question-two" class="quiz-ans-container" style="display:none;">
+<!-- 'display: none' property used rather than 'visibility:hidden' as it fully removes element from flow and structure of web page'  -->
+<!-- Use event listeners to change style to 'block' on those divs demarcated with ids as and where applicable -->
+    <div id="questionTwo" class="quiz-ans-container" style="display:none;">
       <h2>Q2. The condition in an if / else statement is enclosed within ____.</h2>
       <div class="quiz-choice correct-q2">
         <p>1. Curly Brackets</p>
@@ -54,7 +62,7 @@
       </div>
     </div>
 
-    <div id="question-three" class="quiz-ans-container" style="display:none;">
+    <div id="questionThree" class="quiz-ans-container" style="display:none;">
       <h2>Q3. Arrays in Javascript can be used to store ____.</h2>
       <div class="quiz-choice wrong">
         <p>1. Booleans</p>
@@ -70,7 +78,7 @@
       </div>
     </div>
 
-    <div id="question-four" class="quiz-ans-container" style="display:none;">
+    <div id="questionFour" class="quiz-ans-container" style="display:none;">
       <h2>Q4. String Values must be enclosed within ____ when being assigned to variables</h2>
       <div class="quiz-choice wrong">
         <p>1. Square Brackets</p>
@@ -86,7 +94,7 @@
       </div>
     </div>
 
-    <div id="question-five" class="quiz-ans-container" style="display:none;">
+    <div id="questionFive" class="quiz-ans-container" style="display:none;">
       <h2>Q5. A very useful tool used during development and debugging for printing content to the debugger is:</h2>
       <div class="quiz-choice correct-q5">
         <p>1. console.log</p>
@@ -102,13 +110,14 @@
       </div>
     </div>
 
-    <div id="quiz-result" style="display:none;">
-      <p>Result here</p>
-      <div class='score-container'>
-        Score: <span id="score">0</span>
+    <!-- style="display:none;" -->
+    <div id="quizResult">
+      <h2>All Done!</h2>
+      <p>Your final score is: <span id="finalScore"></span></p>
+      <input type="text" placeholder="Enter Initials Here">
+      <button id="submitScore">Submit</button>
       </div>
-    </div>
 
-    <script src="script.js"></script>
+    <script src="/Assets/script.js"></script>
   </body>
 </html>
