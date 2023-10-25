@@ -22,6 +22,7 @@
     font-size: 28px;
     border-bottom: #edc9b5 solid 5px;
     padding: 5px 5px 5px 10px;
+    background-image: linear-gradient(#edc9b5 0%, #457081 100%);
   }
 
   button {

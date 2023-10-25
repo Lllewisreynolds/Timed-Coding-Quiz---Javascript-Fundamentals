@@ -1,4 +1,4 @@
-// Scope is important! Scope is important!!!!!
+// Scope is important!!!!!
 
 // Don't sweat order of sub-function creation - compartmentalise my code and then move things around after / figure out when to call it later?
 
@@ -25,7 +25,13 @@ var submitScoreEl = document.getElementById('submitScore');
 var countdownTimer = 90;
 // Boolean declared in global scope as false. Once state is switched by triggering of 'Start Quiz' button master function, countdown will display and decrement
 var quizTimerStart = false;
+// Variable created to default initial score to 0 at the start of the quiz
+var score = 0;
+// Variable container for an array that will take in any final quiz scores submitted and display them within high scores
+var highScores = [];
 
+
+// Is there any way I can console log this at this point to check flow of code block or do I first need to tether it to a master function triggered by hitting the start button that will eventually contain and call back all of my sub/compartmentalised smaller functions?
 // Function declared to manipulate countdown as quiz duration begins
 function countdownTimerStart() {
 // Local variable declared within function to set interval decrement 
