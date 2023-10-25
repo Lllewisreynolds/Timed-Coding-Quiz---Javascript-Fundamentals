@@ -1,4 +1,16 @@
-
+var highScoresEl = document.getElementById("highScores");
+var currentScoreEl = document.getElementById("currentScore");
+var timerEl = document.getElementById('timer');
+var quizInstructionsEl = document.getElementById('quizInstructions');
+var startBtnEl = document.getElementById('startBtn');
+var questionOneEl = document.getElementById('questionOne');
+var questionTwoEl = document.getElementById('questionTwo');
+var questionThreeEl = document.getElementById('questionThree');
+var questionFourEl = document.getElementById('questionFour');
+var questionFiveEl = document.getElementById('questionFive');
+var quizResultEl = document.getElementById('quizResult');
+var finalScoreEl = document.getElementById('finalScore');
+var submitScoreEl = document.getElementById('submitScore');
 
 
 // GIVEN I am taking a code quiz
