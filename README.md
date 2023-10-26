@@ -1,5 +1,7 @@
 # 04 Web APIs: Code Quiz
 
+I struggled with this challenge greatly, and as of last push to the main branch I have been unable to finish to my satisfaction. I have deployed it in its current interation as is for now.
+
 ## Description
 
 Taking inspiration from atypical coding assessments presented during the application/interview processes for full-stack web developer roles, this Challenge has been designed to showcase responsive, interactive JavaScript code that dynamically updates the HTML and CSS of the application through a timed quiz component that allows you to cycle through several multiple-choice questions and view the high scores of those who have taken the quiz thus far. This has been achieved through the deployment of the following coding practices, methods and techniques, all of which involve the manipulation of the Document Object Model (DOM), an application programming interface (API) native to the browser that provides us with a structure and means by which to affect the structure and content of a web page.
@@ -16,9 +18,9 @@ Taking inspiration from atypical coding assessments presented during the applica
 
 ## Screenshot of Finalised Application - Usage
 
-![img](./)
+![img](./) - to be added once challenge complete.
 
-![img](./)
+![img](./) - to be added once challenge complete.
 
 ## Link to Deployed Application
 
