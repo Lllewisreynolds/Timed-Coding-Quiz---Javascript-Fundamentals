@@ -44,7 +44,7 @@ startBtnEl.addEventListener("click", function(){
     console.log('First question displayed')
     questionOneEl.classList.add("quiz-ans-container");
     console.log('Styling added to center question container visually');
-    // answerSelection();
+    answerSelection();
 })
 
 
@@ -59,7 +59,7 @@ function countdownTimerStart() {
     if (countdownTimer === 0) {
         clearInterval(countdownTimerDecrement);
         // as of yet undefined function
-        endQuiz();
+        // endQuiz();
     }
 }, 1000);
 }
@@ -67,19 +67,30 @@ function countdownTimerStart() {
 // choices must have click event for question buttons
 // break it down! Speak the questions out loud!
 
+// Debugging process! 
+// 1. Console.log the variable causing the error
+// 2. Check the documentation
+// 3. See if your syntax, and what you are trying to apply the event listener to, match what the docs say
+
 
 // WHEN I answer a question
 
 function answerSelection() {
-    var incorrectAnswer = incorrectAnswersEl.addEventListener("click");
-    var correctAnswer1 = questionOneCorrEl|questionTwoCorrEl|questionThreeCorrEl|questionFourCorrEl|questionFiveCorrEl.addEventListener("click");
-    if (incorrectAnswer) {
-        console.log('Incorrect Answer');
+    for (var i = 0; i < incorrectAnswersEl.length; i++) {
+        incorrectAnswersEl[i].addEventListener("click", function() {
+            console.log('Incorrect Answer');
+            // Call a function to handle incorrect answers and subtract time if needed
+
+        });
     }
-    else (correctAnswer) {
-        console.log('Correct! Move onto the next question!');
-    }
+    // var correctAnswer1 = questionOneCorrEl|questionTwoCorrEl|questionThreeCorrEl|questionFourCorrEl|questionFiveCorrEl.addEventListener("click");
+    // if (incorrectAnswer) {
+    //     console.log('Incorrect Answer');
+    // } else if (correctAnswer) {
+    //     console.log('Correct! Move onto the next question!');
+    // }
 }
+
 // THEN I am presented with another question
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
