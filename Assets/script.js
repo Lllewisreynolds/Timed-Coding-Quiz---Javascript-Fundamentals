@@ -43,7 +43,7 @@ function countdownTimerStart() {
     if (countdownTimer === 0) {
         clearInterval(countdownTimerDecrement);
         // as of yet undefined function
-        endquiz();
+        endQuiz();
     }
 }, 1000);
 }
