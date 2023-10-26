@@ -73,6 +73,7 @@ function countdownTimerStart() {
 }, 1000);
 }
 
+//  For loop used to iterate through any incorrect answers selected, as all of have been tagged with the same 'wrong' class selector and therefore make up an array / need a means by which we can target them individually as HTML DOM objects to add Event Listeners
 function answerSelection() {
     for (var i = 0; i < incorrectAnswersEl.length; i++) {
         incorrectAnswersEl[i].addEventListener("click", function() {
