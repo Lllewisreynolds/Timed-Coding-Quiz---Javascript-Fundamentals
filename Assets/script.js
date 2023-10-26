@@ -1,6 +1,15 @@
-// Scope is important!!!!!
+// Notes to self:
+//  1. Scope is important!!!!!
 
-// Don't sweat order of sub-function creation - compartmentalise my code and then move things around after / figure out when to call it later?
+// 2. Don't sweat order of sub-function creation - compartmentalise my code and then move things around after / figure out when to call it later?
+// 3. choices must have click event for question buttons
+// 4. break it down! Speak the questions out loud!
+
+// Debugging process! 
+// 1. Console.log the variable causing the error
+// 2. Check the documentation
+// 3. See if your syntax, and what you are trying to apply, match what the docs say
+
 
 // Global scope variables 
 
@@ -63,17 +72,6 @@ function countdownTimerStart() {
     }
 }, 1000);
 }
-
-// choices must have click event for question buttons
-// break it down! Speak the questions out loud!
-
-// Debugging process! 
-// 1. Console.log the variable causing the error
-// 2. Check the documentation
-// 3. See if your syntax, and what you are trying to apply the event listener to, match what the docs say
-
-
-// WHEN I answer a question
 
 function answerSelection() {
     for (var i = 0; i < incorrectAnswersEl.length; i++) {
