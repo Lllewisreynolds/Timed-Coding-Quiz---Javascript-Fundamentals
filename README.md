@@ -24,6 +24,8 @@ Taking inspiration from atypical coding assessments presented during the applica
 
 ## Link to Deployed Application
 
+https://lllewisreynolds.github.io/Timed-Coding-Quiz---Javascript-Fundamentals/
+
 ## Credits
 
 As this challenge is testing our ability to use and deploy Javascript, styling and formatting for my HTML and CSS has been largely cribbed from the third-party assets available on codepen.io.
