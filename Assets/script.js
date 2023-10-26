@@ -12,6 +12,12 @@ var timerEl = document.getElementById('timer');
 var quizInstructionsEl = document.getElementById('quizInstructions');
 var startBtnEl = document.getElementById('startBtn');
 var questionOneEl = document.getElementById('questionOne');
+var incorrectAnswersEl = document.getElementsByClassName('wrong');
+var questionOneCorrEl = document.getElementById('correct-q1');
+var questionTwoCorrEl = document.getElementById('correct-q2');
+var questionThreeCorrEl = document.getElementById('correct-q3');
+var questionFourCorrEl = document.getElementById('correct-q4');
+var questionFiveCorrEl = document.getElementById('correct-q5');
 var questionTwoEl = document.getElementById('questionTwo');
 var questionThreeEl = document.getElementById('questionThree');
 var questionFourEl = document.getElementById('questionFour');
@@ -26,7 +32,6 @@ var countdownTimer = 90;
 var score = 0;
 // Variable container for an array that will take in any final quiz scores submitted and display them within high scores
 var highScores = [];
-
 // Make copious use of console.log to check the flow of my code block within functions and debug as I go!
 
 startBtnEl.addEventListener("click", function(){
@@ -38,7 +43,8 @@ startBtnEl.addEventListener("click", function(){
     questionOneEl.classList.remove("hide");
     console.log('First question displayed')
     questionOneEl.classList.add("quiz-ans-container");
-    console.log('Styling added to center question container visually')
+    console.log('Styling added to center question container visually');
+    // answerSelection();
 })
 
 
@@ -63,6 +69,17 @@ function countdownTimerStart() {
 
 
 // WHEN I answer a question
+
+function answerSelection() {
+    var incorrectAnswer = incorrectAnswersEl.addEventListener("click");
+    var correctAnswer1 = questionOneCorrEl|questionTwoCorrEl|questionThreeCorrEl|questionFourCorrEl|questionFiveCorrEl.addEventListener("click");
+    if (incorrectAnswer) {
+        console.log('Incorrect Answer');
+    }
+    else (correctAnswer) {
+        console.log('Correct! Move onto the next question!');
+    }
+}
 // THEN I am presented with another question
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
