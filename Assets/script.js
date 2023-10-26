@@ -31,6 +31,7 @@ var questionTwoEl = document.getElementById('questionTwo');
 var questionThreeEl = document.getElementById('questionThree');
 var questionFourEl = document.getElementById('questionFour');
 var questionFiveEl = document.getElementById('questionFive');
+var answerFeedbackEl = document.getElementById('answerFeedback');
 var quizResultEl = document.getElementById('quizResult');
 var finalScoreEl = document.getElementById('finalScore');
 var submitScoreEl = document.getElementById('submitScore');
@@ -77,11 +78,23 @@ function countdownTimerStart() {
 function answerSelection() {
     for (var i = 0; i < incorrectAnswersEl.length; i++) {
         incorrectAnswersEl[i].addEventListener("click", function() {
-            console.log('Incorrect Answer');
+            console.log('Incorrect Answer registered');
+
+            // Initial attempts to create answer feedback as part of function below:
+            // answerFeedbackEl.classList.remove("hide");
+            // console.log('Answer feedback displayed')
+            // questionOneEl.classList.add("feedback-status-incorrect");
+            // answerFeedbackEl.innerHTML = "Incorrect Answer! 10 seconds deducted."
+
+            countdownTimer -= 10;
+            console.log('Incorrect Answer! 10 seconds deducted');
             // Call a function to handle incorrect answers and subtract time if needed
 
         });
     }
+
+    // Event listener cannot be used to target more than one individual HTML DOM object - create another for loop to somehow cycle through the below perhaps?
+
     // var correctAnswer1 = questionOneCorrEl|questionTwoCorrEl|questionThreeCorrEl|questionFourCorrEl|questionFiveCorrEl.addEventListener("click");
     // if (incorrectAnswer) {
     //     console.log('Incorrect Answer');
