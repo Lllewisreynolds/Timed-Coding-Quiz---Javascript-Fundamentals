@@ -6,9 +6,9 @@ Taking inspiration from atypical coding assessments presented during the applica
 
 1. Pulling through HTML elements I will need to manipulate in JavaScript in order to create additional quiz functionality via their unique id tags through the getElementById() method of the document interface.
 
-2. Use of the native JavaScript method of setInterval() to execute some code upon the start of each quiz attempt (triggered by the start button) for a set period of time through its callback function (as defined by myself) and an interval as its parameters. This ensures the quiz only goes on for its alloted amount of time and displays its current remaining the user as a visual aid. This is then cleared at the end of the alloted time with the corresponding clearInterval() method to ensure the code does not run indefinitely.
+2. Used the native addEventListener() method to register a click event directly to the start button that initiates our quiz and its overall code block function.
 
-3. 
+3. Use of the native JavaScript method of setInterval() to execute some code upon the start of each quiz attempt (triggered by the start button) for a set period of time through its callback function (as defined by myself) and an interval as its parameters. This ensures the quiz only goes on for its alloted amount of time and displays its current remaining the user as a visual aid. This is then cleared at the end of the alloted time with the corresponding clearInterval() method to ensure the code does not run indefinitely.
 
 4. 
 

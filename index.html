@@ -29,7 +29,7 @@
           <button id="startBtn">Start Quiz</button>
       </div>
 
-    <div id="questionOne" class="quiz-ans-container">
+    <div id="questionOne" class="hide">
       <h2>Q1. Commonly used data types DO NOT include: </h2>
       <div class="quiz-choice wrong-q1">
         <p>1. Strings</p>
@@ -46,7 +46,7 @@
     </div>
 <!-- 'display: none' property used rather than 'visibility:hidden' as it fully removes element from flow and structure of web page'  -->
 <!-- Use event listeners to change style to 'block' on those divs demarcated with ids as and where applicable -->
-    <div id="questionTwo" class="quiz-ans-container" style="display:none;">
+    <div id="questionTwo" class="hide">
       <h2>Q2. The condition in an if / else statement is enclosed within ____.</h2>
       <div class="quiz-choice correct-q2">
         <p>1. Curly Brackets</p>
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <div id="questionThree" class="quiz-ans-container" style="display:none;">
+    <div id="questionThree" class="hide">
       <h2>Q3. Arrays in Javascript can be used to store ____.</h2>
       <div class="quiz-choice wrong">
         <p>1. Booleans</p>
@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <div id="questionFour" class="quiz-ans-container" style="display:none;">
+    <div id="questionFour" class="hide">
       <h2>Q4. String Values must be enclosed within ____ when being assigned to variables</h2>
       <div class="quiz-choice wrong">
         <p>1. Square Brackets</p>
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <div id="questionFive" class="quiz-ans-container" style="display:none;">
+    <div id="questionFive" class="hide">
       <h2>Q5. A very useful tool used during development and debugging for printing content to the debugger is:</h2>
       <div class="quiz-choice correct-q5">
         <p>1. console.log</p>
@@ -110,14 +110,13 @@
       </div>
     </div>
 
-    <!-- style="display:none;" -->
-    <div id="quizResult">
+    <div id="quizResult" class="hide">
       <h2>All Done!</h2>
       <p>Your final score is: <span id="finalScore"></span></p>
       <input type="text" placeholder="Enter Initials Here">
       <button id="submitScore">Submit</button>
       </div>
 
-    <script src="/Assets/script.js"></script>
+    <script src="./Assets/script.js"></script>
   </body>
 </html>

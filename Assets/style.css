@@ -66,6 +66,10 @@
     margin: 20px;
   }
 
+  .hide {
+    display: none;
+  }
+
   #quizInstructions {
     text-align: center;
     color: #edc9b5;

@@ -2,7 +2,6 @@
 
 // Don't sweat order of sub-function creation - compartmentalise my code and then move things around after / figure out when to call it later?
 
-
 // Global scope variables 
 
 // HTML elements I will need to pull through and manipulate in JavaScript to provide additional quiz functionality
@@ -23,22 +22,33 @@ var submitScoreEl = document.getElementById('submitScore');
 
 // Time allocated at start of quiz - will be manipulated when questions answered incorrectly
 var countdownTimer = 90;
-// Boolean declared in global scope as false. Once state is switched by triggering of 'Start Quiz' button master function, countdown will display and decrement
-var quizTimerStart = false;
 // Variable created to default initial score to 0 at the start of the quiz
 var score = 0;
 // Variable container for an array that will take in any final quiz scores submitted and display them within high scores
 var highScores = [];
 
+// Make copious use of console.log to check the flow of my code block within functions and debug as I go!
 
-// Is there any way I can console log this at this point to check flow of code block or do I first need to tether it to a master function triggered by hitting the start button that will eventually contain and call back all of my sub/compartmentalised smaller functions?
+startBtnEl.addEventListener("click", function(){
+    console.log('Button clicked');
+    countdownTimerStart();
+    console.log('Timer started');
+    quizInstructionsEl.classList.add("hide");
+    console.log('Quiz instructions now hidden');
+    questionOneEl.classList.remove("hide");
+    console.log('First question displayed')
+    questionOneEl.classList.add("quiz-ans-container");
+    console.log('Styling added to center question container visually')
+})
+
+
 // Function declared to manipulate countdown as quiz duration begins
 function countdownTimerStart() {
 // Local variable declared within function to set interval decrement 
     var countdownTimerDecrement = setInterval(function() {
-        !quizTimerStart;
         countdownTimer --;
         timerEl.textContent = countdownTimer;
+        // console.log('Timer counting down');
         
     if (countdownTimer === 0) {
         clearInterval(countdownTimerDecrement);
@@ -48,11 +58,10 @@ function countdownTimerStart() {
 }, 1000);
 }
 
+// choices must have click event for question buttons
+// break it down! Speak the questions out loud!
 
 
-// GIVEN I am taking a code quiz
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
 // WHEN I answer a question
 // THEN I am presented with another question
 // WHEN I answer a question incorrectly
